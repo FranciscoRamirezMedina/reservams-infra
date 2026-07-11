@@ -147,12 +147,13 @@ services:
       - reservams-room-service
       - reservams-availability-service
     command:
-      - "--spring.datasource.url=jdbc:mysql://host.docker.internal:3306/reservams_reservation_db"
-      - "--spring.datasource.username=root"
-      - "--spring.datasource.password="
-      - "--eureka.client.service-url.defaultZone=http://reservams-eureka-server:8761/eureka/"
-      - "--spring.kafka.bootstrap-servers=kafka:29092"
-      - "--availability.service.url=http://reservams-availability-service:8085"
+      - "--spring.profiles.active=prod"
+      - "--DB_URL=jdbc:mysql://host.docker.internal:3306/reservams_reservation_db"
+      - "--DB_USERNAME=root"
+      - "--DB_PASSWORD="
+      - "--EUREKA_URL=http://reservams-eureka-server:8761/eureka/"
+      - "--KAFKA_BOOTSTRAP_SERVERS=kafka:29092"
+      - "--AVAILABILITY_SERVICE_URL=http://reservams-availability-service:8085"
 
   reservams-payment-service:
     build:
