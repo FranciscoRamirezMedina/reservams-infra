@@ -43,6 +43,8 @@ services:
     container_name: reservams-eureka-server
     ports:
       - "8761:8761"
+    command:
+      - "--spring.profiles.active=prod"
 
   reservams-api-gateway:
     build:
