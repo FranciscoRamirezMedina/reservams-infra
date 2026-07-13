@@ -18,7 +18,14 @@ ReservaMS es un sistema backend de reservas hoteleras basado en arquitectura de 
 
 Cada microservicio se mantiene en un repositorio independiente, por lo que este repositorio centraliza únicamente la infraestructura necesaria para ejecutar el sistema completo.
 
+## Clonar todos los repositorios
 
+Como el proyecto utiliza un repositorio independiente por cada microservicio, se agregó un script de apoyo para facilitar la clonación completa del ecosistema.
+
+El script se encuentra en:
+
+```text
+scripts/clone-all.ps1
 
 \## Servicios incluidos
 
